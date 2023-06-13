@@ -1,0 +1,8 @@
+H:\C# Project\ProductReviewManagement\ProductReviewManagement\bin\Debug\ProductReviewManagement.exe.config
+H:\C# Project\ProductReviewManagement\ProductReviewManagement\bin\Debug\ProductReviewManagement.exe
+H:\C# Project\ProductReviewManagement\ProductReviewManagement\bin\Debug\ProductReviewManagement.pdb
+H:\C# Project\ProductReviewManagement\ProductReviewManagement\obj\Debug\ProductReviewManagement.csproj.AssemblyReference.cache
+H:\C# Project\ProductReviewManagement\ProductReviewManagement\obj\Debug\ProductReviewManagement.csproj.SuggestedBindingRedirects.cache
+H:\C# Project\ProductReviewManagement\ProductReviewManagement\obj\Debug\ProductReviewManagement.csproj.CoreCompileInputs.cache
+H:\C# Project\ProductReviewManagement\ProductReviewManagement\obj\Debug\ProductReviewManagement.exe
+H:\C# Project\ProductReviewManagement\ProductReviewManagement\obj\Debug\ProductReviewManagement.pdb
