@@ -34,6 +34,7 @@ namespace ProductReviewManagement
                 Console.WriteLine("2. Retrieve top 3 records whose Rating is high");
                 Console.WriteLine("3. Retrieve all records where rating is greater than 3 " +
                     "and ProductID is 1 or 4 or 9");
+                Console.WriteLine("4. Retrieve Count of review present for each Product ID");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -48,8 +49,11 @@ namespace ProductReviewManagement
                     case 2:
                         productManagement.TopRecords(productReviews);
                         break;
-                        case 3:
-                            productManagement.RatingProductId(productReviews);
+                    case 3:
+                        productManagement.RatingProductId(productReviews);
+                        break;
+                    case 4:
+                        productManagement.CountProductIdReview(productReviews);
                         break;
                     default:
                         Console.WriteLine("Enter valid option :");
