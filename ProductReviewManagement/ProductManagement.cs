@@ -19,5 +19,17 @@ namespace ProductReviewManagement
                     " Rating:-" + data.Rating + " Review:-" + data.Review + " IsLike:-" + data.IsLike);
             }
         }
+        public void RatingProductId(List<ProductReview> listReview)
+        {
+            var ratingProductId=(from productreview in listReview
+                                 where productreview.Rating>3
+                                 && (productreview.ProductID == 1 || productreview.ProductID == 4 || productreview.ProductID == 9)
+                                 select productreview);
+            foreach (var data in ratingProductId)
+            {
+                Console.WriteLine("ProductID:-" + data.ProductID + " " + "UserID:- " + data.UserID +
+                    " Rating:-" + data.Rating + " Review:-" + data.Review + " IsLike:-" + data.IsLike);
+            }
+        }
     }
 }

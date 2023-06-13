@@ -32,6 +32,8 @@ namespace ProductReviewManagement
                 Console.WriteLine("Choose your option : ");
                 Console.WriteLine("1. Show Product Details");
                 Console.WriteLine("2. Retrieve top 3 records whose Rating is high");
+                Console.WriteLine("3. Retrieve all records where rating is greater than 3 " +
+                    "and ProductID is 1 or 4 or 9");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -45,6 +47,9 @@ namespace ProductReviewManagement
                         break;
                     case 2:
                         productManagement.TopRecords(productReviews);
+                        break;
+                        case 3:
+                            productManagement.RatingProductId(productReviews);
                         break;
                     default:
                         Console.WriteLine("Enter valid option :");
