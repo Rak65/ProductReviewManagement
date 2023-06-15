@@ -27,6 +27,11 @@ namespace ProductReviewManagement
                 new ProductReview() { ProductID = 10, UserID = 10, Rating = 1.1, Review = "nice", IsLike = true },
                 new ProductReview() { ProductID = 11, UserID = 11, Rating = 5.5, Review = "fine", IsLike = true },
                 new ProductReview() { ProductID = 12, UserID = 12, Rating = 5.1, Review = "nice", IsLike = true },
+                new ProductReview() { ProductID = 13, UserID = 10, Rating = 2.1, Review = "bad", IsLike = true },
+                new ProductReview() { ProductID = 14, UserID = 10, Rating = 2.9, Review = "Awesome", IsLike = true },
+                new ProductReview() { ProductID = 15, UserID = 10, Rating = 1.1, Review = "nice", IsLike = true },
+                new ProductReview() { ProductID = 16, UserID = 10, Rating = 5.5, Review = "fine", IsLike = true },
+                new ProductReview() { ProductID = 17, UserID = 10, Rating = 5.1, Review = "nice", IsLike = true },
             };
             do {
                 Console.WriteLine("Choose your option : ");
@@ -41,6 +46,7 @@ namespace ProductReviewManagement
                 Console.WriteLine("8. Create a dataTable and insert 25 records and display.");
                 Console.WriteLine("10. Average Rating.");
                 Console.WriteLine("11. Retrieve records where the review message contains nice");
+                Console.WriteLine("12. Retrieve records orderby rating where the UserId is 10.");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -79,6 +85,9 @@ namespace ProductReviewManagement
                         break;
                     case 11:
                         productManagement.RetrieveAllRecords(productReviews);
+                        break;
+                    case 12:
+                        productManagement.RetrieveAllRecordsUser10(productReviews);
                         break;
                     default:
                         Console.WriteLine("Enter valid option :");
