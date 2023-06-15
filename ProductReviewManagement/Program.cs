@@ -38,6 +38,7 @@ namespace ProductReviewManagement
                 Console.WriteLine("5. Retrieve only ProductId and Review from the list.");
                 Console.WriteLine("6. skip top five record from the list.");
                 Console.WriteLine("7. Retrieve only ProductId and Review from the list.");
+                Console.WriteLine("8. Create a dataTable and insert 25 records and display.");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -66,6 +67,10 @@ namespace ProductReviewManagement
                         break;
                     case 7:
                         productManagement.RetriveProductIdAndReview(productReviews);
+                        break;
+                    case 8:
+                            CreateDataTable createDataTable = new CreateDataTable();
+                        createDataTable.AddColumns();
                         break;
                     default:
                         Console.WriteLine("Enter valid option :");
