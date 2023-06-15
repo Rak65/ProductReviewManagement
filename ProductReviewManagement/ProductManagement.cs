@@ -64,7 +64,16 @@ namespace ProductReviewManagement
             var result = (from productreview in listReview
                           select productreview.Rating).Average();
             Console.WriteLine("Average Rating : "+result);
-
+        }
+        public void RetrieveAllRecords(List<ProductReview> listReview)
+        {
+            var result = (from productreview in listReview
+                          where productreview.Review.Contains("nice")
+                          select productreview);
+            foreach (var data in result) {
+                Console.WriteLine("ProductID:-" + data.ProductID + " " + "UserID:- " + data.UserID +
+                        " Rating:-" + data.Rating + " Review:-" + data.Review + " IsLike:-" + data.IsLike);
+            }
         }
     }
 }
