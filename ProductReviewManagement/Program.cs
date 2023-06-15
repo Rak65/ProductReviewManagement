@@ -39,6 +39,7 @@ namespace ProductReviewManagement
                 Console.WriteLine("6. skip top five record from the list.");
                 Console.WriteLine("7. Retrieve only ProductId and Review from the list.");
                 Console.WriteLine("8. Create a dataTable and insert 25 records and display.");
+                Console.WriteLine("9. Average Rating.");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -71,6 +72,9 @@ namespace ProductReviewManagement
                     case 8:
                             CreateDataTable createDataTable = new CreateDataTable();
                         createDataTable.AddColumns();
+                        break;
+                    case 9:
+                            productManagement.AvgRating(productReviews);
                         break;
                     default:
                         Console.WriteLine("Enter valid option :");

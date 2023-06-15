@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,6 +58,13 @@ namespace ProductReviewManagement
                 Console.WriteLine("ProductID:-" + data.ProductID + " " + "UserID:- " + data.UserID +
                     " Rating:-" + data.Rating + " Review:-" + data.Review + " IsLike:-" + data.IsLike);
             }
+        }
+        public void AvgRating(List<ProductReview> listReview)
+        {
+            var result = (from productreview in listReview
+                          select productreview.Rating).Average();
+            Console.WriteLine("Average Rating : "+result);
+
         }
     }
 }
