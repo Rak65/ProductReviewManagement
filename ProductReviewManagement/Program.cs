@@ -37,6 +37,7 @@ namespace ProductReviewManagement
                 Console.WriteLine("4. Retrieve Count of review present for each Product ID.");
                 Console.WriteLine("5. Retrieve only ProductId and Review from the list.");
                 Console.WriteLine("6. skip top five record from the list.");
+                Console.WriteLine("7. Retrieve only ProductId and Review from the list.");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -62,6 +63,9 @@ namespace ProductReviewManagement
                         break;
                     case 6:
                         productManagement.SkipTopFive(productReviews);
+                        break;
+                    case 7:
+                        productManagement.RetriveProductIdAndReview(productReviews);
                         break;
                     default:
                         Console.WriteLine("Enter valid option :");
