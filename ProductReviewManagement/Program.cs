@@ -30,11 +30,12 @@ namespace ProductReviewManagement
             };
             do {
                 Console.WriteLine("Choose your option : ");
-                Console.WriteLine("1. Show Product Details");
-                Console.WriteLine("2. Retrieve top 3 records whose Rating is high");
+                Console.WriteLine("1. Show Product Details.");
+                Console.WriteLine("2. Retrieve top 3 records whose Rating is high.");
                 Console.WriteLine("3. Retrieve all records where rating is greater than 3 " +
-                    "and ProductID is 1 or 4 or 9");
-                Console.WriteLine("4. Retrieve Count of review present for each Product ID");
+                    "and ProductID is 1 or 4 or 9.");
+                Console.WriteLine("4. Retrieve Count of review present for each Product ID.");
+                Console.WriteLine("5. Retrieve only ProductId and Review from the list.");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -54,6 +55,9 @@ namespace ProductReviewManagement
                         break;
                     case 4:
                         productManagement.CountProductIdReview(productReviews);
+                        break;
+                    case 5:
+                        productManagement.RetriveProductIdAndReview(productReviews);
                         break;
                     default:
                         Console.WriteLine("Enter valid option :");
