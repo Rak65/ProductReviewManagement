@@ -20,13 +20,13 @@ namespace ProductReviewManagement
                 new ProductReview() { ProductID = 3, UserID = 3, Rating = 2.5, Review = "bad", IsLike = true },
                 new ProductReview() { ProductID = 4, UserID = 4, Rating = 3.0, Review = "excellent", IsLike = true },
                 new ProductReview() { ProductID = 5, UserID = 5, Rating = 3.8, Review = "Good", IsLike = true },
-                new ProductReview() { ProductID = 6, UserID = 6, Rating = 3.9, Review = "Good", IsLike = true },
+                new ProductReview() { ProductID = 6, UserID = 6, Rating = 3.9, Review = "nice", IsLike = true },
                 new ProductReview() { ProductID = 7, UserID = 7, Rating = 4.2, Review = "fine", IsLike = true },
                 new ProductReview() { ProductID = 8, UserID = 8, Rating = 2.1, Review = "bad", IsLike = true },
                 new ProductReview() { ProductID = 9, UserID = 9, Rating = 2.9, Review = "Awesome", IsLike = true },
-                new ProductReview() { ProductID = 10, UserID = 10, Rating = 1.1, Review = "Good", IsLike = true },
+                new ProductReview() { ProductID = 10, UserID = 10, Rating = 1.1, Review = "nice", IsLike = true },
                 new ProductReview() { ProductID = 11, UserID = 11, Rating = 5.5, Review = "fine", IsLike = true },
-                new ProductReview() { ProductID = 12, UserID = 12, Rating = 5.1, Review = "Good", IsLike = true },
+                new ProductReview() { ProductID = 12, UserID = 12, Rating = 5.1, Review = "nice", IsLike = true },
             };
             do {
                 Console.WriteLine("Choose your option : ");
@@ -39,7 +39,8 @@ namespace ProductReviewManagement
                 Console.WriteLine("6. skip top five record from the list.");
                 Console.WriteLine("7. Retrieve only ProductId and Review from the list.");
                 Console.WriteLine("8. Create a dataTable and insert 25 records and display.");
-                Console.WriteLine("9. Average Rating.");
+                Console.WriteLine("10. Average Rating.");
+                Console.WriteLine("11. Retrieve records where the review message contains nice");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -73,8 +74,11 @@ namespace ProductReviewManagement
                             CreateDataTable createDataTable = new CreateDataTable();
                         createDataTable.AddColumns();
                         break;
-                    case 9:
+                    case 10:
                             productManagement.AvgRating(productReviews);
+                        break;
+                    case 11:
+                        productManagement.RetrieveAllRecords(productReviews);
                         break;
                     default:
                         Console.WriteLine("Enter valid option :");
