@@ -75,5 +75,19 @@ namespace ProductReviewManagement
                         " Rating:-" + data.Rating + " Review:-" + data.Review + " IsLike:-" + data.IsLike);
             }
         }
+
+        public void RetrieveAllRecordsUser10(List<ProductReview> listReview)
+        {
+            var result = (from productreview in listReview
+                          where productreview.UserID==10
+                          orderby productreview.Rating
+                          select productreview);
+            foreach (var data in result)
+            {
+                Console.WriteLine("ProductID:-" + data.ProductID + " " + "UserID:- " + data.UserID +
+                        " Rating:-" + data.Rating + " Review:-" + data.Review + " IsLike:-" + data.IsLike);
+            }
+        }
+
     }
 }
